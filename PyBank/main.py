@@ -12,7 +12,6 @@ Months = []
 Profit_Losses = []
 Profit_Changes = []
 counter = 0
-total_count = 0
 
 #open csv
 with open (csv_path,'r') as csvfile:
@@ -23,14 +22,16 @@ with open (csv_path,'r') as csvfile:
          Profit_Losses.append(int(row[1]))
 
 #Loop over Profit_Losses
-for row in Profit_Losses[:3]:
+for row in Profit_Losses[:6]:
     if counter > 0:
         value_1 = Profit_Losses[(counter - 1)]
         value_2 = Profit_Losses[counter]
         Monthly_Change = value_2 - value_1
         Profit_Changes.append(Monthly_Change)
+        #add to counter
         counter = counter + 1
     else:
+        #add to counter
         counter = counter + 1
 
 print(Profit_Changes)
