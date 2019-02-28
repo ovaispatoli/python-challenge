@@ -1,37 +1,43 @@
-#import modules/libraries
+#This is the starting of the PyPoll assignment
+#import necessary modules: OS and CSV
 import os
 import csv
 
-#Create path
+#Create path, read file
+#get the current working directory
 current = os.getcwd()
+#Join Current to csv file
 csv_path = os.path.join(current, 'election_data.csv')
 
-#The empty lists
+#Initialize empty lists: voter_ids, Counties and Candidates
 voter_ids = []
 Counties = []
 Candidates = []
 
 #open csv
 with open(csv_path, 'r') as csvfile:
+    #read csv
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
-    #print(csv_header)
     #loop over to read csv and append values to predefined lists
     for row in csvreader:
+        #append first column values to voter_ids list
         voter_ids.append(row[0])
+        #append second column values to Counties list
         Counties.append(row[1])
+        #append third column values to Candidates list
         Candidates.append(row[2])
 
 #Calculate Total Votes, use set() to remove duplicate id's if they exist
 Total_Votes = len(list(set(voter_ids)))
 
-#set Candidate count variables
+#set Candidate count variables, used '.count' method 
 Khan_Count  = Candidates.count("Khan")
 Correy_Count = Candidates.count("Correy")
 Li_Count = Candidates.count("Li")
 OTooley_Count = Candidates.count("O'Tooley")
 
-#Calculate percentage of votes for each candidate
+#Calculate percentage of votes for each candidate and round: candidate_count/Total_Votes, used 'round()'
 Khan_Cent = round(((Khan_Count/Total_Votes) * 100),3)
 Correy_Cent = round(((Correy_Count/Total_Votes) * 100),3)
 Li_Cent = round(((Li_Count/Total_Votes) * 100),3)

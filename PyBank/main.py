@@ -1,4 +1,4 @@
-#This is the starting of the Pybank Project
+#This is the starting of the Pybank Assignment
 #import necessary modules: OS and CSV
 import os
 import csv
@@ -21,6 +21,7 @@ with open (csv_path,'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     #remove the header of csv
     csv_header = next(csvreader)
+    #Loop over to read csv and append values to predefined lists
     for row in csvreader:
          #append to Months list from first column of data
          Months.append(row[0])
