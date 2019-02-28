@@ -16,9 +16,10 @@ with open(csv_path, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
     print(csv_header)
-    #for row in csvfile:
-        #voter_ids.append(row[0])
-        #Counties.append(row[1])
-        #Candidates.append(row[2])
+    for row in csvreader:
+        voter_ids.append(row[0])
+        Counties.append(row[1])
+        Candidates.append(row[2])
 
 #test print
+print(voter_ids[0],Counties[0], Candidates[0])
