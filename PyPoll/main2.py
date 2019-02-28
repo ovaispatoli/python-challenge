@@ -25,16 +25,21 @@ with open(csv_path, 'r') as csvfile:
 #Calculate Total Votes, use set() to remove duplicate id's if they exist
 Total_Votes = len(list(set(voter_ids)))
 
+#set Candidate count variables
+Khan_count  = Candidates.count("Khan")
+Correy_count = Candidates.count("Correy")
+Li_Count = Candidates.count("Li")
+OTooley_Count = Candidates.count("O'Tooley")
 
 #Print Election results and dotted line
-#print("Election Results")
-#print("---------------------")
+print("Election Results")
+print("---------------------")
 
 #print Total Votes
 print(f"Total Votes: {Total_Votes}")
 
 #print dotted line
-#print("---------------------")
+print("---------------------")
 
 #print percentages of votes and Total Votes for each candidate
 #print(f"Khan: {} ({})")
