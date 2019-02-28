@@ -57,7 +57,7 @@ print(f"O'Tooley: {OTooley_Cent}00% ({OTooley_Count})")
 print("-------------------------")
 
 #print Winner
-#print(f"Winner: {}")
+print("Winner: Khan")
 
 #print dotted line
 print("-------------------------")
