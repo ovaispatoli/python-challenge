@@ -26,26 +26,32 @@ with open(csv_path, 'r') as csvfile:
 Total_Votes = len(list(set(voter_ids)))
 
 #set Candidate count variables
-Khan_count  = Candidates.count("Khan")
-Correy_count = Candidates.count("Correy")
+Khan_Count  = Candidates.count("Khan")
+Correy_Count = Candidates.count("Correy")
 Li_Count = Candidates.count("Li")
 OTooley_Count = Candidates.count("O'Tooley")
 
+#Calculate percentage of votes for each candidate
+Khan_Cent = round(((Khan_Count/Total_Votes) * 100),3)
+Correy_Cent = round(((Correy_Count/Total_Votes) * 100),3)
+Li_Cent = round(((Li_Count/Total_Votes) * 100),3)
+OTooley_Cent = round(((OTooley_Count/Total_Votes) * 100),3)
+
 #Print Election results and dotted line
-print("Election Results")
-print("---------------------")
+#print("Election Results")
+#print("---------------------")
 
 #print Total Votes
-print(f"Total Votes: {Total_Votes}")
+#print(f"Total Votes: {Total_Votes}")
 
 #print dotted line
-print("---------------------")
+#print("---------------------")
 
 #print percentages of votes and Total Votes for each candidate
-#print(f"Khan: {} ({})")
-#print(f"Correy: {} ({})")
-#print(f"Li: {} ({})")
-#print(f"O'Tooley: {} ({})")
+print(f"Khan: {Khan_Cent}00% ({Khan_Count})")
+print(f"Correy: {Correy_Cent}00% ({Correy_Count})")
+print(f"Li: {Li_Cent}00% ({Li_Count})")
+print(f"O'Tooley: {OTooley_Cent}00% ({OTooley_Count})")
 
 #print Winner
 #print(f"Winner: {}")
