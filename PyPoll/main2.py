@@ -38,14 +38,14 @@ Li_Cent = round(((Li_Count/Total_Votes) * 100),3)
 OTooley_Cent = round(((OTooley_Count/Total_Votes) * 100),3)
 
 #Print Election results and dotted line
-#print("Election Results")
-#print("---------------------")
+print("Election Results")
+print("---------------------")
 
 #print Total Votes
-#print(f"Total Votes: {Total_Votes}")
+print(f"Total Votes: {Total_Votes}")
 
 #print dotted line
-#print("---------------------")
+print("---------------------")
 
 #print percentages of votes and Total Votes for each candidate
 print(f"Khan: {Khan_Cent}00% ({Khan_Count})")
@@ -54,7 +54,7 @@ print(f"Li: {Li_Cent}00% ({Li_Count})")
 print(f"O'Tooley: {OTooley_Cent}00% ({OTooley_Count})")
 
 #print Winner
-#print(f"Winner: {}")
+print(f"Winner: {}")
 
 #print dotted line
 #print("---------------------")
