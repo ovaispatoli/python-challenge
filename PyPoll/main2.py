@@ -2,7 +2,7 @@
 import os
 import csv
 
-#Create path, read file
+#Create path
 current = os.getcwd()
 csv_path = os.path.join(current, 'election_data.csv')
 
@@ -16,7 +16,7 @@ with open(csv_path, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
     #print(csv_header)
-    #loop over to read csv and assign values to predefined lists
+    #loop over to read csv and append values to predefined lists
     for row in csvreader:
         voter_ids.append(row[0])
         Counties.append(row[1])
