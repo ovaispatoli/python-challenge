@@ -6,11 +6,18 @@ import csv
 #Create path, read file
 current = os.getcwd()
 csv_path = os.path.join(current,'budget_data.csv')
-#print(csv_path)
 
+#initialize an empty months list
+Months = []
+
+#open csv
 with open (csv_path,'r') as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=' ')
+    csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
     for row in csvreader:
-        print(row)
+        Months.append(row[0])
         
+
+#Total Months
+Total_Months = len(Months)
+print(f"Total Months: ",Total_Months)
